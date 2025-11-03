@@ -1,0 +1,133 @@
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+  --color-dark-blue: #09244d;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+html,
+body {
+    font-family: var(--font-geist-sans), sans-serif !important; 
+    color: #ffffff !important;
+    background-color: var(--color-dark-blue) !important;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+h1, h2, h3 {
+    margin-top: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.section-padding {
+    padding-top: 80px;
+    padding-bottom: 80px;
+}
+
+.container-custom {
+    padding-left: 20px;
+    padding-right: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+@media (prefers-color-scheme: dark) {
+  html {
+    color-scheme: dark;
+  }
+}
+
+.profile-card {
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    padding: 30px;
+}
+
+.profile-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15); 
+}
+
+.profile-image-border {
+    border: 5px solid var(--bs-primary); 
+    padding: 5px; 
+    background-color: white;
+    transition: border-color 0.3s;
+}
+
+.btn-primary-custom {
+    background-color: var(--bs-primary);
+    border-color: var(--bs-primary);
+    transition: all 0.2s ease;
+}
+
+.btn-primary-custom:hover {
+    background-color: var(--bs-dark);
+    border-color: var(--bs-dark);
+    transform: scale(1.02);
+}
+
+.badge {
+    padding: 0.4em 0.8em;
+    border-radius: 50rem;
+    font-weight: 600;
+}
+
+.text-muted {
+    color: #e0e0e0 !important; 
+}
+
+@media (max-width: 576px) {
+    .display-4 {
+        font-size: 2.5rem !important;
+    }
+}
+
+.social-icon {
+    font-size: 1.8rem; 
+    margin-right: 30px; 
+    padding: 5px;
+    color: var(--bs-dark);
+    transition: all 0.3s ease;
+}
+
+.social-icon:hover {
+    color: var(--bs-primary); 
+    transform: translateY(-3px) scale(1.1);
+}
+
+.skill-badge {
+    display: inline-block;
+    padding: 8px 15px;
+    margin: 5px;
+    border-radius: 6px;
+    font-weight: 600;
+    font-size: 0.9rem;
+    background-color: rgba(255, 255, 255, 0.1);
+    color: #f0f0f0;
+    transition: background-color 0.3s, color 0.3s;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.skill-badge:hover {
+    background-color: var(--bs-primary);
+    color: var(--color-dark-blue);
+    cursor: default;
+}
