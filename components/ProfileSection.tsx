@@ -56,7 +56,7 @@ const ProfileSection: React.FC = () => {
 
             <div className="d-flex flex-wrap">
               <a 
-                href="#projects" 
+                href="https://github.com/Darrell30?tab=repositories" 
                 className={`btn btn-lg me-3 mb-2 ${'btn-primary-custom'}`} 
                 role="button"
               >
@@ -64,7 +64,7 @@ const ProfileSection: React.FC = () => {
               </a>
               
               <a 
-                href="#contact" 
+                href="https://wa.me/6287787245452" 
                 className="btn btn-outline-secondary btn-lg mb-2" 
                 role="button"
               >
