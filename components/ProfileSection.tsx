@@ -48,7 +48,7 @@ const ProfileSection: React.FC = () => {
               <a href="https://instagram.com/darrell_ac" target="_blank" rel="noopener noreferrer" className="social-icon text-dark"> 
                   <i className="bi bi-instagram"></i>
               </a>
-              <a href="URL_FACEBOOK_ANDA" target="_blank" rel="noopener noreferrer" className="social-icon text-dark"> 
+              <a href="#facebook" target="_blank" rel="noopener noreferrer" className="social-icon text-dark"> 
                   <i className="bi bi-facebook"></i>
               </a>
           </div>

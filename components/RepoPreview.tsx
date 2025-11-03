@@ -1,5 +1,3 @@
-// components/RepoPreview.tsx
-
 import React from 'react';
 
 const GITHUB_USERNAME = 'Darrell30'; 
@@ -10,7 +8,6 @@ const SELECTED_REPOS = [
   'kampus.com', 
 ];
 
-// Definisikan struktur data
 interface Repo {
   id: number;
   name: string;
@@ -20,11 +17,9 @@ interface Repo {
   language: string | null;
 }
 
-// Data fetching di Server Component
 async function getSelectedRepos(): Promise<Repo[]> {
   const fetchPromises = SELECTED_REPOS.map(repoName => 
     fetch(`https://api.github.com/repos/${GITHUB_USERNAME}/${repoName}`, {
-      // Revalidasi setiap 12 jam (43200 detik)
       next: { revalidate: 43200 }, 
     })
   );
@@ -41,7 +36,6 @@ async function getSelectedRepos(): Promise<Repo[]> {
       validResponses.map(res => res.json())
     );
     
-    // Kembalikan hanya data yang valid dan berhasil di-fetch
     return reposData;
 
   } catch (error) {
@@ -50,7 +44,6 @@ async function getSelectedRepos(): Promise<Repo[]> {
   }
 }
 
-// Komponen Utama
 export default async function RepoPreview() {
   const repos = await getSelectedRepos();
 
@@ -71,13 +64,10 @@ export default async function RepoPreview() {
             <span className="text-primary">{repos.length}</span> Best Projects
         </h2>
         
-        {/* Bootstrap Row untuk tata letak Grid */}
         <div className="row g-4 justify-content-center">
           
           {repos.map((repo) => (
-            // Gunakan col-lg-4 agar 3 repo muat dalam satu baris di layar besar
             <div key={repo.id} className="col-lg-4 col-md-6">
-              {/* Gunakan class kustom 'profile-card' pada setiap item repo */}
               <div className={`h-100 p-4 ${'profile-card'}`}> 
                 
                 <div className="d-flex justify-content-between align-items-start mb-2">
